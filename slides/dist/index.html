@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>如果你是一隻穿山甲，你能在臺灣活得好嗎？</title>
+<style>
+:root{color-scheme:dark;--ink:#f6f5e9;--muted:#c5d1c3;--green:#101d18;--panel:#1e3026;--gold:#e8bc77}*{box-sizing:border-box}body{margin:0;background:var(--green);color:var(--ink);font:1rem/1.7 system-ui,sans-serif}a{color:var(--gold);text-underline-offset:4px}button,.button{font:inherit;cursor:pointer;border:1px solid #72907d;border-radius:.65rem;background:#283f32;color:var(--ink);padding:.68rem 1rem;text-decoration:none}button:hover,.button:hover{border-color:var(--gold)}button:disabled{opacity:.48;cursor:default}:focus-visible{outline:3px solid var(--gold);outline-offset:4px}[hidden]{display:none!important}.bar,main,footer{width:min(1120px,92%);margin:auto}.bar{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;flex-wrap:wrap}.bar nav{display:flex;gap:1.2rem;flex-wrap:wrap}.hero{min-height:560px;display:grid;align-items:center;background:linear-gradient(90deg,#102319 12%,#102319dd 44%,#10231922),#162e21}.hero-inner{width:min(1120px,92%);margin:auto;padding:4rem 0}.eyebrow{color:var(--gold);font-weight:650;letter-spacing:.13em}h1,h2,h3{line-height:1.22;margin:0 0 1rem}h1{font-size:clamp(2.25rem,6vw,5rem);max-width:13em;letter-spacing:-.06em}h2{font-size:clamp(1.65rem,4vw,2.65rem)}p{max-width:70ch}.hero p{color:var(--muted);margin-bottom:2rem}.primary{background:var(--gold);color:#201a10;border-color:transparent;font-weight:700}.credit{font-size:.9rem;color:var(--muted);width:min(1120px,92%);margin:.5rem auto}.section{margin:4.5rem 0}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(245px,100%),1fr));gap:.9rem}.card,.quiz,details{background:var(--panel);border:1px solid #476252;border-radius:1rem;padding:1.15rem}.card p{margin:.4rem 0;color:var(--muted)}.quiz{padding:clamp(1rem,4vw,2.25rem);max-width:810px}.quiz-head,.controls{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}.controls{margin-top:1.5rem}progress{width:100%;accent-color:var(--gold);margin:.6rem 0 1.4rem}fieldset{min-width:0;border:0;padding:0;margin:0}legend{font-weight:750;font-size:clamp(1.28rem,3vw,1.9rem);line-height:1.45;margin-bottom:.75rem}.option{display:flex;align-items:baseline;gap:.6rem;padding:.72rem;background:#13231b;border:1px solid #476252;border-radius:.6rem;margin-bottom:.55rem;cursor:pointer}.option:has(input:checked){border-color:var(--gold)}input{accent-color:var(--gold)}.feedback{background:#13231b;border-left:4px solid var(--gold);padding:.8rem 1rem;margin-top:1rem}.feedback p{margin:.45rem 0}details{margin:.65rem 0}summary{cursor:pointer;font-weight:650}footer{padding:2rem 0;border-top:1px solid #476252;color:var(--muted)}@media(max-width:600px){.hero{min-height:470px;background-position:62% center}.hero-inner{padding:2rem 0}.section{margin:3rem 0}}
+.reading{max-width:850px}.reading p{max-width:none}.chapter-nav{display:flex;flex-wrap:wrap;gap:.65rem 1.25rem;padding:1rem 0;border-bottom:1px solid #476252}.chapter{padding:2rem 0;border-bottom:1px solid #476252;scroll-margin-top:1rem}.chapter:last-of-type{margin-bottom:1.5rem}.chapter h3{font-size:clamp(1.4rem,3vw,1.8rem)}.chapter p{color:var(--muted);line-height:1.9}.chapter .refs{font-size:.95rem;margin-bottom:0}.deck-active{min-height:100dvh;padding-bottom:6rem}.deck-active .section{margin-top:0;margin-bottom:0;padding:clamp(1.5rem,5vw,4rem) 0;min-height:min(65vh,640px)}.deck-active .reading{width:min(100%,900px);margin-inline:auto}.deck-active .chapter{border:0}.deck-active .chapter h3{font-size:clamp(1.8rem,5vw,3.2rem)}.deck-active .reading p{font-size:clamp(1rem,2vw,1.14rem)}.cover-credit{font-size:.875rem;margin:1.5rem 0 0!important}.deck-active .deck-footer{position:fixed;z-index:3;bottom:0;left:0;right:0;width:100%;padding:.5rem 4%;background:#101d18f7;text-align:center}.deck-controls{display:grid;align-items:center;gap:.5rem;grid-template-columns:1fr auto 1fr;width:min(100%,580px);margin:0 auto .2rem}.deck-controls button:first-child{justify-self:start}.deck-controls button:last-child{justify-self:end}.deck-active .hero{min-height:min(68vh,680px)}.deck-active .quiz{max-width:900px}.deck-active details{overflow-wrap:anywhere}
+
+.bar nav{margin-left:auto;justify-content:flex-end}.bar nav a{padding:.26rem .62rem;border:1px solid #587361;border-radius:.55rem;text-decoration:none}.bar nav a:hover{border-color:var(--gold)}.roadmap{list-style:none;counter-reset:road;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;padding:0;margin:1.5rem 0}.roadmap li{counter-increment:road}.roadmap a{display:block;height:100%;padding:1.1rem;border:1px solid #587361;border-radius:.9rem;background:var(--panel);text-decoration:none}.roadmap a::before{content:counter(road);display:block;margin-bottom:.45rem;color:var(--gold);font-size:.95rem}.roadmap strong{display:block;color:var(--ink);font-size:1.24rem}.roadmap span{display:block;color:var(--muted);margin-top:.4rem}.shortcut-note{border-left:3px solid var(--gold);padding-left:.85rem}.visual{margin:1.15rem 0 1.35rem}.path{display:flex;flex-wrap:wrap;gap:.55rem;padding:0;list-style:none;counter-reset:path;margin:0}.path li{counter-increment:path;background:var(--panel);border:1px solid #587361;border-radius:.55rem;padding:.48rem .68rem;color:var(--ink);font-weight:650}.path li::before{content:counter(path) ". ";color:var(--gold)}.timeline li{flex:1;min-width:min(100%,150px)}.timeline small{display:block;color:var(--gold);font-size:.875rem}.timeline li::before{content:none}.numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}.numbers div{padding:.65rem;background:var(--panel);border:1px solid #587361;border-radius:.6rem;text-align:center}.numbers dt{font-weight:750;color:var(--gold);font-size:clamp(1.15rem,4vw,1.85rem)}.numbers dd{margin:0;color:var(--muted)}.chapter strong{color:var(--ink)}@media(max-width:600px){.roadmap{grid-template-columns:1fr}.roadmap a{padding:.75rem}.roadmap a::before{display:inline;margin-right:.55rem}.roadmap strong{display:inline}.bar nav{gap:.35rem}.bar nav a{padding:.2rem .35rem;font-size:.875rem}}
+
+/* Directional links show sequence; a shared stem groups related evidence. */
+.roadmap{column-gap:2rem}.roadmap li{position:relative}
+.roadmap li:not(:last-child)::after,.path li:not(:last-child)::after{content:"";position:absolute;display:block;pointer-events:none;width:1rem;height:.7rem;background:var(--gold);clip-path:polygon(0 44%,70% 44%,52% 14%,64% 2%,100% 50%,64% 98%,52% 86%,70% 56%,0 56%);top:50%;left:calc(100% + .5rem);transform:translateY(-50%)}
+.chapter-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;position:relative;margin-top:1rem;padding-top:.9rem}
+.chapter-map::before{content:"";position:absolute;top:0;left:25%;right:25%;height:.85rem;border:1px solid #789685;border-bottom:0;border-radius:.55rem .55rem 0 0}
+.map-node{padding:clamp(.9rem,2vw,1.2rem);background:#172921;border:1px solid #587361;border-radius:.85rem;min-width:0}
+.map-node h4{margin:0 0 .55rem;font-size:1.12rem;color:var(--gold);line-height:1.4}.map-node p{margin:0}.map-node .visual{margin:.95rem 0 0}.map-node .path{flex-direction:column;gap:1.25rem}.map-node .path li{position:relative;flex:auto;min-width:0}.path li:not(:last-child)::after{top:calc(100% + .22rem);left:calc(50% - .5rem);transform:rotate(90deg)}
+.map-node .numbers{gap:.35rem}.map-node .numbers div{padding:.45rem .18rem}.map-node .numbers dd{font-size:.85rem}
+@media(max-width:650px){.chapter-map{grid-template-columns:1fr;padding:0 0 0 .8rem}.chapter-map::before{top:1rem;bottom:1rem;height:auto;left:0;right:auto;width:.8rem;border-right:0;border-bottom:1px solid #789685;border-radius:.55rem 0 0 .55rem}}
+@media(max-width:600px){.roadmap{row-gap:1.45rem}.roadmap li:not(:last-child)::after{top:calc(100% + .32rem);left:calc(50% - .5rem);transform:rotate(90deg)}}
+.horizontal{gap:1.65rem}.horizontal li{position:relative}.horizontal li:not(:last-child)::after{top:50%;left:calc(100% + .3rem);transform:translateY(-50%)}@media(max-width:600px){.horizontal{display:grid;gap:.9rem}.horizontal li:not(:last-child)::after{top:calc(100% + .1rem);left:calc(50% - .5rem);transform:rotate(90deg)}}#risk .map-node p+p,#matoushan .map-node p+p{margin-top:.75rem}
+.deck-active .reading p:not(.refs), .feedback p{text-indent:2em}
+.deck-active .reading .map-node p+p{margin-top:.85rem}
+.deck-active .reading .map-node h4{font-size:clamp(1.28rem,2.5vw,1.48rem);margin-bottom:.7rem}
+.deck-active .reading .refs,.deck-active .chapter .refs{font-size:.88rem;line-height:1.55;text-indent:0;color:#b5c3b8;margin-top:1rem;padding-top:.75rem;border-top:1px solid #476252}
+
+.feature-note{padding:.8rem .9rem;border-left:3px solid var(--gold);background:#20372b;margin:.9rem 0;border-radius:0 .6rem .6rem 0}
+.feature-note a{font-size:.88rem}
+.injury-chart{--trap:#e8bc77;--dog:#8dbdb4;--car:#f3937c;display:grid;gap:.8rem;justify-items:center;margin:.9rem 0 1.1rem}
+.injury-chart figcaption{width:100%;max-width:22rem}
+.pie{width:min(10rem,55vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--trap) 0% 77.7778%,var(--dog) 77.7778% 98.1481%,var(--car) 98.1481%);border:1px solid #557165}
+.pie-key{list-style:none;margin:0 0 .4rem;padding:0;display:grid;gap:.4rem;font-size:.91rem}
+.pie-key li{display:grid;grid-template-columns:.65rem 1fr auto;gap:.4rem;align-items:center}
+.key-swatch{width:.65rem;height:.65rem;border-radius:.22rem}.key-swatch.trap{background:var(--trap)}.key-swatch.dog{background:var(--dog)}.key-swatch.car{background:var(--car)}
+.burrow-illustration{margin:1.15rem 0 0}.burrow-illustration img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;background:#172921;border-radius:.8rem}.burrow-illustration figcaption{font-size:.88rem;color:var(--muted);margin-top:.45rem}
+
+.deck-active .hero{background:linear-gradient(90deg,#102319 8%,#102319e8 36%,#10231960 78%),#162e21}
+.deck-active .cover-credit a{color:var(--gold)}.study-snapshot{margin-top:1rem}.study-snapshot .numbers{margin-bottom:.2rem}
+.pie{width:min(15rem,100%);position:relative;isolation:isolate}
+.pie-label{position:absolute;color:#161c17;font-size:clamp(.75rem,3.6vw,.9rem);line-height:1.15;font-weight:750;text-align:center;transform:translate(-50%,-50%);white-space:nowrap}
+.slice-trap{left:58%;top:69%}.slice-dog{left:26%;top:30%}
+.slice-car{left:59%;top:14%;border-radius:.25rem;padding:.18rem .23rem;background:#f3937c}
+.slice-car::before{content:"";position:absolute;width:1.6rem;height:1px;background:#281815;right:95%;top:45%;transform:rotate(54deg);transform-origin:right}
+
+.hero,.deck-active .hero{background:linear-gradient(145deg,#192f24,#101d18);min-height:0}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:clamp(1rem,4vw,3rem)}
+.cover-photo{margin:0;overflow:hidden;border:1px solid #587361;border-radius:.8rem;background:#26392d}
+.cover-photo img{display:block;width:100%;height:auto;object-fit:contain}
+.hero h1{font-size:clamp(2rem,4.2vw,4.15rem)}
+.injury-timeline{display:grid;gap:.7rem;margin-top:1.2rem}
+.injury-connector{display:flex;align-items:center;gap:.65rem;padding:0 .9rem;color:var(--muted);font-size:.93rem}
+.injury-connector span{color:var(--gold);font-size:1.4rem;line-height:1}
+.recent-counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:.45rem;padding:0;list-style:none;margin:.8rem 0}
+.recent-counts li{padding:.45rem .65rem;border:1px solid #587361;border-radius:.5rem}
+@media(max-width:720px){.hero-inner{grid-template-columns:1fr;padding:1.2rem 0}.cover-photo{grid-row:1}.cover-photo img{max-height:clamp(170px,39vw,300px)}.hero p{margin-bottom:1rem}.hero h1{font-size:clamp(1.9rem,6vw,2.8rem)}}
+
+.deck-active .hero{position:relative;overflow:hidden;isolation:isolate;min-height:min(73vh,740px)}
+.hero-inner{display:block;position:relative;padding:clamp(11rem,27vw,20rem) 0 1.4rem}
+.cover-photo{position:absolute;z-index:-2;inset:0 calc((100% - 100vw)/2);margin:0;border:0;border-radius:0;background:#25372e}
+.cover-photo img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 45%}
+.cover-copy{position:relative;width:min(100%,48rem);padding:1rem 1.15rem;border-radius:.9rem;background:#101d18bc;backdrop-filter:blur(3px)}
+.cover-copy p{margin:.7rem 0 1.1rem}.cover-copy .cover-credit{margin-top:.8rem!important}
+.injury-connector{min-height:3.2rem;gap:1rem}.injury-connector span{display:grid;place-items:center;flex:0 0 2.5rem;height:3rem;font-size:0}.injury-connector span::before{content:"";width:1.65rem;height:2.65rem;background:var(--gold);clip-path:polygon(43% 0,57% 0,57% 68%,87% 51%,100% 62%,50% 100%,0 62%,13% 51%,43% 68%)}
+@media(max-width:720px){.deck-active .hero{min-height:0}.hero-inner{padding:clamp(11rem,51vw,22rem) 0 1.15rem}.cover-photo img{height:auto;object-fit:contain}.cover-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 36%,#101d1845 58%,#101d18 83%)}.cover-copy{background:#101d18b5;padding:.9rem}}
+</style>
+</head>
+<body>
+<header class="bar"><strong>臺灣穿山甲</strong><nav aria-label="站內導覽"><a href="#profile">物種介紹</a><a href="#quiz">六道解謎</a><a href="#wiki">查閱 Wiki</a></nav></header>
+<section class="hero" id="cover" data-slide><div class="hero-inner"><div class="cover-copy"><div class="eyebrow">臺灣淺山生態</div><h1>如果你是一隻穿山甲，<br>你能在臺灣活得好嗎？</h1><p>從身上的毛、夜裡找的食物，到一座山的開發案。先猜一猜，再看看研究者找到了什麼證據。</p><a class="button primary" href="#roadmap">開始簡報</a><p class="cover-credit">照片：<a href="https://commons.wikimedia.org/wiki/File:Manis_pentadactyla_pentadactyla.jpg">科技部「科技大觀園」／Wikimedia Commons</a> · <a href="https://scitechvista.nat.gov.tw/StaticPage/copyright">政府網站資料開放宣告</a></p></div><figure class="cover-photo"><img src="pangolin-photo.jpg" alt="側面實拍的臺灣穿山甲，頭部、前肢、鱗片和尾巴完整可見" width="680" height="480" fetchpriority="high"></figure></div></section>
+<main>
+<section id="roadmap" class="section reading" data-slide>
+<h2>這份簡報會講什麼？</h2>
+<p>先認識臺灣穿山甲，再用六道題試著判讀證據。想知道答案從哪裡來，最後可以查閱 Wiki。</p>
+<ol class="roadmap">
+<li><a href="#profile"><strong>物種介紹</strong><span>從鱗片和長舌，看到牠的食物、棲地與育幼。</span></a></li>
+<li><a href="#quiz"><strong>六道謎題</strong><span>先選答案，再看研究者怎麼找出線索。</span></a></li>
+<li><a href="#wiki"><strong>查閱 Wiki</strong><span>展開來源摘要，回查原文與研究限制。</span></a></li>
+</ol>
+<p class="shortcut-note"><strong>右上角是快捷入口。</strong>閱讀時可以直接跳到物種介紹、六道解謎或 Wiki，也能用下方按鈕逐張播放。</p>
+</section>
+<section id="profile" class="section reading" data-slide>
+<h2>認識臺灣穿山甲</h2>
+<p>如果你要在臺灣的淺山當一隻穿山甲，第一天就得面對幾個問題：到哪裡找食物？天亮前在哪裡休息？如果帶著幼獸，原本用的洞還適合嗎？下面從牠的身體讀到牠生活的環境，再用六道題檢驗這些線索。</p>
+<nav aria-label="章節目錄" class="chapter-nav"><a href="#body">分類與形態</a><a href="#food">感官與覓食</a><a href="#burrows">棲地與用洞</a><a href="#breeding">繁殖與育幼</a><a href="#risk">人為威脅與保育</a></nav>
+</section>
+<article class="section chapter reading" id="body" data-slide>
+<h3>身穿盔甲，還是一隻哺乳動物</h3>
+
+<div class="chapter-map">
+<section class="map-node"><h4>「盔甲」底下還有毛</h4><p>穿山甲背上的鱗片很搶眼，鱗片下也能見到毛髮。牠的肚皮比較柔軟，遇到威脅時會<em>把身體捲起來</em>，把腹部藏在內側。母獸會給幼獸哺乳，牠是如假包換的哺乳動物。</p></section>
+<section class="map-node"><h4>前爪負責開挖，長舌負責開飯</h4><p>牠用強壯的前爪挖洞、扒開蟻巢。嘴裡沒有牙齒，卻有一條細長、沾著黏稠唾液的舌頭。對這位吃蟻專家來說，<strong>舌頭本身就是餐具</strong>。</p></section></div>
+<p>牠是中華穿山甲在臺灣的亞種，學名 <i>Manis pentadactyla pentadactyla</i>。其他穿山甲物種的習性可以比較，仍要留意差異。</p>
+<ol class="path horizontal" aria-label="分類由廣到細"><li>哺乳綱</li><li>鱗甲目</li><li>穿山甲科</li><li>穿山甲屬</li><li>中華穿山甲</li><li>臺灣亞種</li></ol>
+<p class="refs">延伸閱讀 · <a href="#S-009">分類 S-009</a> · <a href="#S-010">形態 S-010</a> · <a href="#S-001">育幼 S-001</a></p>
+</article>
+<article class="section chapter reading" id="food" data-slide>
+<h3>夜間開飯：鼻子找、前爪挖、舌頭吃</h3>
+
+<div class="chapter-map">
+<section class="map-node"><h4>鼻子比眼睛先到餐桌</h4><p>臺北市立動物園曾看到穿山甲「芎梧」在飯盒一打開就轉頭嗅聞。遇到蟻窩，牠會<strong>用前爪扒開，再伸出黏舌</strong>，把小得很難一隻隻抓的螞蟻一口氣黏起來。鼻子、爪子和舌頭各有分工。</p>
+<ol class="path"><li>嗅聞食物線索</li><li>扒開蟻巢</li><li>伸舌黏取獵物</li></ol></section>
+<section class="map-node"><h4>螞蟻與白蟻，菜單會換季</h4><p>臺灣東南部的野外紀錄中，穿山甲吃了多種螞蟻和白蟻。當地樣本估算，<strong>估算的白蟻獵物生物量在 4–6 月達到高峰，螞蟻則在夏季最高</strong>。臺灣土白蟻是當地重要的一道菜。換到別的地點，獵物種類和出現時間可能不同，目前這組結果以東南部為限。</p></section></div>
+<p class="refs">證據小記 · 季節變化來自 132 份糞便。嗅聞例子是動物園照養個案；泰國兩隻巽他穿山甲的實驗另提供跨物種比較。<br><a href="#S-017">芎梧 S-017</a> · <a href="#S-011">野外食性 S-011</a> · <a href="#S-012">感官比較 S-012</a></p>
+</article>
+<article class="section chapter reading" id="burrows" data-slide>
+<h3>白天躲進洞，晚上出門找飯</h3>
+
+<div class="chapter-map">
+<section class="map-node"><h4>淺山是牠的生活圈</h4><p>臺灣穿山甲主要出現在淺山。林地、竹林與部分農墾地都可能留下牠的蹤跡。牠白天多躲在休息處，晚上出門活動。有些洞是挖來找蟻的，有些則能遮蔽、休息或育幼。</p></section>
+<section class="map-node"><h4>一隻穿山甲可以有好幾個落腳處</h4><p>穿山甲<strong>可以換洞，也會回到用過的洞</strong>。同一個洞還可能被不同個體先後使用。</p></section></div>
+<section class="map-node study-snapshot"><h4>臺東延平｜牠們有多少落腳處？</h4><p>研究團隊用無線電追蹤 7 隻野生穿山甲，以牠們實際使用的休息洞為對象。這 7 隻合計用過 137 個不同的洞，包含重訪在內，共記錄到 324 次使用。</p>
+<dl class="numbers visual"><div><dt>7 隻</dt><dd>受追蹤個體</dd></div><div><dt>137 個</dt><dd>去過的不同休息洞</dd></div><div><dt>324 次</dt><dd>使用總次數，含重訪</dd></div></dl></section>
+<p class="refs">證據小記 · 棲地與休息洞紀錄。<a href="#S-009">棲地 S-009</a> · <a href="#S-002">陽明山 S-002</a> · <a href="#S-005">臺東 S-005</a> · <a href="#burrow-neighbors">看看誰也會用洞</a></p>
+</article>
+<article class="section chapter reading" id="burrow-neighbors" data-slide>
+<h3>穿山甲挖的洞，還有其他房客</h3>
+<div class="chapter-map">
+<section class="map-node"><h4>臺灣的洞穴訪客</h4><p>臺北市立動物園介紹，<strong>白鼻心、鼬獾、食蟹獴</strong>都可能利用穿山甲挖的洞躲藏或歇息。臺東的野外追蹤還記錄到鼬獾、食蟹獴進入育幼洞。</p></section>
+<section class="map-node"><h4>穿山甲也是淺山建築師</h4><p>牠為自己挖出覓食或休息的空間，洞穴也可能成為其他動物的藏身處。從洞口看進去黑漆漆的，背後卻可能有不同訪客。</p></section></div>
+<figure class="burrow-illustration"><img src="taiwan-burrow.jpg" alt="臺灣野外土坡上的洞口，洞前有一片挖出的鬆土"><figcaption>臺灣洞口實拍，呈現洞口與土堆。Jerome Ko 攝，<a href="https://commons.wikimedia.org/wiki/File:Manis_pentadactyla_pentadactyla_182659164.jpg">Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，縮小尺寸。</figcaption></figure>
+<p class="refs">證據小記 · 圖片為洞口照片。臺灣洞穴訪客另見 <a href="#S-019">動物園 S-019</a> 與 <a href="#S-001">臺東觀察 S-001</a>；<a href="#S-018">廣東研究 S-018</a>供比較。</p>
+</article>
+<article class="section chapter reading" id="breeding" data-slide>
+<h3>從交配到出生，一胎幾隻？</h3>
+<div class="chapter-map">
+<section class="map-node"><h4>雄獸會到雌獸的洞穴附近</h4><p>雄獸會到雌獸的洞穴附近，<strong>交配也可以在洞外發生</strong>。臺東有母獸在產後的育幼期再次交配的例子。</p></section>
+<section class="map-node"><h4>幼獸出生時，一胎一隻</h4><p>臺東一隻野生母獸連續兩年在 <strong>12 月初各生下一隻幼獸</strong>。她的第二胎妊娠約 150 天（估計）。出生月份和妊娠長度是這隻母獸的例子，其他個體可能不同。</p></section>
+</div>
+<p class="refs">證據小記 · 臺東母獸的交配、超音波與出生紀錄。<a href="#S-001">野外繁殖觀察 S-001</a></p>
+</article>
+<article class="section chapter reading" id="young" data-slide>
+<h3>穿山甲媽媽也會帶小孩搬家</h3>
+
+<div class="chapter-map">
+<section class="map-node"><h4>洞穴也是育嬰房</h4><p>幼獸出生後，育幼洞就是牠的第一個家。牠在洞裡躲藏、喝奶，長大後才和媽媽分開生活。臺東有一胎從出生到母幼分離<strong>約五個月</strong>。</p></section>
+<section class="map-node"><h4>想搬家時，寶寶一起帶走</h4><p>母獸會<strong>帶著幼獸換育幼洞</strong>，同一個家可以有好幾個地址。鼬獾與食蟹獴也會進入育幼洞，因此換洞可能有助於避開掠食者。這個解釋還待證實。</p><p>幼獸外出時也能抓住<strong>媽媽的尾巴搭便車</strong>，不用一路靠自己的小短腿追。</p></section></div>
+<p class="refs">證據小記 · 臺東個案首胎育幼約 157 天；攀附母獸尾巴見動物園照養紀錄。<a href="#S-001">臺東母獸 S-001</a> · <a href="#S-020">搭便車 S-020</a></p>
+</article>
+<article class="section chapter reading" id="risk" data-slide>
+<h3>鱗片擋不住哪些危險？</h3>
+
+<p><strong>早期屏東紀錄以捕獸鋏為主，2025 年的屏東盤點則以犬隻攻擊最多。</strong>下面按紀錄的起始年份排列，前兩段有年份重疊，各組也有不同的收案範圍與分母。</p>
+<div class="injury-timeline" aria-label="依起始年份排列的穿山甲救傷紀錄">
+<section class="map-node"><h4>屏東救傷中心｜2006–2017</h4><p>這段期間送到屏東救傷中心的穿山甲中，有 <strong>54 件創傷</strong>納入下圖。</p>
+<figure class="injury-chart">
+<div class="pie" role="img" aria-label="54 件創傷。捕獸鋏 42 件 77.8%；疑似犬咬尾傷 11 件 20.4%；車撞 1 件 1.9%。">
+<span class="pie-label slice-trap">捕獸鋏<br>77.8%</span>
+<span class="pie-label slice-dog">疑似犬咬<br>20.4%</span>
+<span class="pie-label slice-car">車撞 1.9%</span>
+</div>
+<figcaption><ul class="pie-key">
+<li><span class="key-swatch trap" aria-hidden="true"></span><span>捕獸鋏</span><strong>42 件（77.8%）</strong></li>
+<li><span class="key-swatch dog" aria-hidden="true"></span><span>疑似犬咬尾傷</span><strong>11 件（20.4%）</strong></li>
+<li><span class="key-swatch car" aria-hidden="true"></span><span>車撞</span><strong>1 件（1.9%）</strong></li>
+</ul><small>扇形依件數繪製，各比例四捨五入。</small></figcaption>
+</figure><p>131 隻入站個體中有 <strong>14 隻入站後死亡</strong>。其中 11 隻有肢體創傷、1 隻為車撞，另有 2 隻屬其他情況。臺東的另一組野外追蹤也記錄 5 起受困於地洞或樹洞後死亡。</p></section>
+<div class="injury-connector"><span aria-hidden="true">↓</span> 另一個救傷站的紀錄，與上段年份部分重疊</div>
+<section class="map-node"><h4>特生中心急救站｜2013–2022</h4><p>臺北市立動物園特展公布的創傷統計中，<strong>206 件有 145 件歸為犬隻攻擊，約 70%</strong>。犬隻攻擊可造成尾巴缺損，嚴重時可能致死。</p><aside class="feature-note"><h4>尾巴是牠的平衡幫手</h4><p>爬樹時，尾巴能協助穩住身體。遭犬咬而失去部分尾巴，可能影響<strong>平衡和攀爬</strong>。幼獸外出時也能抓住<strong>媽媽的尾巴搭便車</strong>。母獸尾巴缺損，可能讓幼獸較難攀附。影響程度會隨傷勢而異。</p><a href="#S-015">尾傷 S-015</a> · <a href="#S-020">育幼 S-020</a></aside></section>
+<div class="injury-connector"><span aria-hidden="true">↓</span> 回到屏東，看看近期盤點</div>
+<section class="map-node"><h4>屏科大收容中心｜2025 年 12 月盤點</h4>
+<p>中心在 12 月 17 日公布的 2025 年盤點中，共收治 38 隻，其中 18 隻入院時無明顯外傷或異常。另 20 隻傷病或安置個體的入院原因如下。</p>
+<ul class="recent-counts"><li><strong>13 隻（65%）</strong> 犬隻攻擊</li><li><strong>3 隻（15%）</strong> 車撞</li><li><strong>3 隻（15%）</strong> 陷阱傷害</li><li><strong>1 隻（5%）</strong> 私養沒入安置</li></ul>
+<p>這組數字呈現該中心的收案。2006–2017 年的圓餅圖以創傷為分母，這次的 20 隻也包含安置個體，因此適合比較兩組各自最常見的原因。</p></section></div>
+<p class="refs">證據小記 · 受傷、入站後死亡和野外死亡分開計算。<a href="#S-014">屏東與臺東資料 S-014</a> · <a href="#S-015">特展救傷統計 S-015</a> · <a href="#S-021">2025 屏科大盤點 S-021</a></p>
+</article>
+<article class="section chapter reading" id="matoushan" data-slide>
+<h3>馬頭山怎麼了？一片刺竹林的去留</h3>
+<div class="chapter-map">
+<section class="map-node"><h4>發生了什麼事？</h4><p>高雄馬頭山一帶早年有<strong>廢棄物掩埋場</strong>爭議，後來又出現新的<strong>太陽光電計畫</strong>。信鼎壹號能源擬在山的東南側設置<strong>光電場</strong>。公視報導，<strong>2024 年 5 月 30 日</strong>，業者原訂在旗山區公所開說明會，居民抗議通知與程序，會議未能舉行。業者表示會顧及生態。</p></section>
+<section class="map-node"><h4>對穿山甲和其他動物有什麼關係？</h4><p>泥岩惡地的刺竹林一帶有穿山甲活動，當地也有保安林與台 28 線生態廊道。穿山甲需要能找到蟻的地面、可挖洞的土，以及能在覓食與休息處之間走動的空間。這片地景對動物是棲地，也可連接不同活動區域。</p><p><strong>如果整地移除竹林或切斷連續棲地</strong>，穿山甲可能失去部分找食物、用洞或移動的空間。這是可能的影響；案場是否核准或施工、實際衝擊多大，目前仍待官方案卷與監測確認。</p></section></div>
+<p class="refs">證據小記 · 2024 年報導交代事件，2026 年保育公告補充在地廊道與監測背景。<a href="#S-008">公視報導 S-008</a> · <a href="#S-016">林業保育署 S-016</a></p>
+</article>
+<section id="quiz" class="section" data-slide><h2>六道解謎</h2>
+<div class="quiz"><div class="quiz-head"><span id="position"></span><span id="score"></span></div><progress id="progress" max="6" value="0" aria-label="已揭曉題數"></progress>
+<form id="question"><fieldset><legend id="prompt" tabindex="-1"></legend><div id="options"></div></fieldset><button id="reveal" type="submit" class="primary">看證據與答案</button></form>
+<div class="feedback" id="feedback" role="status" hidden></div>
+<div class="controls"><button id="previous" type="button">上一題</button><button id="reset" type="button">重新開始</button><button id="next" type="button">下一題</button></div></div>
+<noscript>啟用 JavaScript 即可答題。下方的 Wiki 證據仍可直接閱讀。</noscript>
+</section>
+<section id="recap" class="section reading" data-slide>
+<h2>牠能在臺灣活得好嗎？</h2>
+<p>穿山甲要有可覓食的環境、可休息與育幼的洞，也需要能在這些地方之間活動。臺灣的研究已記錄牠吃過什麼、如何重複利用洞穴，以及母獸曾怎麼帶幼獸換洞。捕獸鋏、犬隻與車撞曾造成傷亡。馬頭山案例則提醒我們，食物、洞穴和移動路線都依賴棲地的完整性。</p>
+<p id="recap-score"></p>
+<p><a href="#S-011">食性 S-011</a> · <a href="#S-005">洞穴 S-005</a> · <a href="#S-001">育幼 S-001</a> · <a href="#S-015">遊蕩犬 S-015</a> · <a href="#S-008">馬頭山 S-008</a></p>
+</section>
+<section id="wiki" class="section" data-slide><h2>查閱 Wiki 證據</h2><p>展開來源摘要，再依原文定位查閱。每份摘要都保留研究對象與取用限制。</p>
+<details id="S-001"><summary>S-001｜Long term monitoring of the reproductive behavior of wild Chinese pangolin (Manis pentadactyla)</summary><p>- Nick Ching-Min Sun、Kurtis Jai-Chyi Pei、Li-Yue Wu（2021），Scientific Reports 11:18116。DOI 10.1038/s41598-021-97618-4。
+- 地點、對象與樣本：臺東，野生雌獸 LF28，2012–2016。
+- 已閱讀範圍：出版 PDF 的摘要、方法、結果及討論相關段落。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>野外母獸何時繁殖，如何使用育幼洞？</p><p>研究方法</p><p>無線電追蹤、洞口相機及超音波，兩段密集觀察。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 首胎從估計出生至記錄所示母幼分離為 157 天。第二胎曾拍到母獸攜幼換洞。 | 研究觀察（首胎起訖含推定） | Results 的 LF28’s body weight growth and two cases of birth、圖 1 與圖 3 | 臺東，野生雌獸 LF28，2012–2016 |</p><p>研究限制與待查證事項</p><p>單一母獸、曾有發報器故障；育幼期受觀察定義影響。</p><p>臺灣野外多母獸的育幼時程及年際差異需要更多個體追蹤。</p><p>相關概念與分歧</p><p>- 繁殖與育幼</p><p><a href="https://www.nature.com/articles/s41598-021-97618-4.pdf">查閱原文</a></p><p>臺東 LF28 兩次皆於 12 月初生一胎、每胎一隻。第二胎妊娠約 150 天為作者依超音波與出生時間推估。曾觀察到交配和雄獸造訪。作者推測換洞可能有助於避開掠食者，並記錄到鼬獾或食蟹獴進入育幼洞；未證實每次移動的原因。</p></details>
+<details id="S-002"><summary>S-002｜Historic record, current distribution and habitat selection of Chinese pangolin in Yangmingshan National Park, Taiwan</summary><p>- Hsiang Ling Chen、Yu-Chuan Liao、Wen-Jun Lin、Hou-Feng Li（2025），Global Ecology and Conservation 59:e03521。DOI 10.1016/j.gecco.2025.e03521。
+- 地點、對象與樣本：陽明山，1995–2017 歷史紀錄與 2018–2019 野外洞穴調查。
+- 已閱讀範圍：研究機構保存的原刊 PDF，摘要、調查與模型方法、§3.1–3.3。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>穿山甲洞穴出現在哪些環境，與歷史紀錄如何對照？</p><p>研究方法</p><p>彙整歷史紀錄、調查洞穴，並比較洞穴與隨機位置的環境條件。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 共記錄 707 個洞穴，94 個受調查網格中有 86 格發現洞穴。模型中海拔較高、距溫泉較近與較低的洞穴出現機率相關。 | 研究觀察與模型估計 | §3.2–3.3.1、表 1 | 陽明山，1995–2017 歷史紀錄與 2018–2019 野外洞穴調查 |</p><p>研究限制與待查證事項</p><p>歷史紀錄與現代調查方法不一。707 為洞穴數，含樣線外發現；研究無法以此估計個體數。</p><p>需有重複、可比較且處理偵測率的調查確認族群趨勢。</p><p>相關概念與分歧</p><p>- 棲地、洞穴與空間利用
+- 繁殖與育幼 用於跨情境比較。
+- S-005 的個體追蹤提供解讀洞穴數的限制。</p><p><a href="https://www.for.nchu.edu.tw/uploads/file/thesis/20250409122550_historicrecordcurrentdistributionandhabitatselectionofchinesepangolininyangmingshannationalparktaiwan.pdf">查閱原文</a></p></details>
+<details id="S-003"><summary>S-003｜The Activity Rhythm and Home Range Characteristics of Released Chinese Pangolins (Manis pentadactyla)</summary><p>- Haochen Huang、Zhenhui Shen、Xinhao Zhang、Hongyi Cheng、Chungang Xie、Rongquan Zheng（2025），Animals 15:1658。DOI 10.3390/ani15111658。
+- 地點、對象與樣本：浙江金華、麗水與餘姚，5 隻救傷後野放的雄獸，2023–2024。
+- 已閱讀範圍：PMC 全文可讀，核對 §2–4 與表 1–6 相關內容。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>野放後活動節律和活動範圍有何特徵？</p><p>研究方法</p><p>GPS 定位配合加速度計；以最小凸多邊形與核心區核密度估計整理位置。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 加速度計活動高峰落在 22:00 至隔日 04:00；表 5 個體的活動範圍估計差異很大。 | 研究觀察與模型估計 | §3.1–3.2、表 5–6 | 浙江金華、麗水與餘姚，5 隻救傷後野放的雄獸，2023–2024 |</p><p>研究限制與待查證事項</p><p>全為雄獸，追蹤 21–72 天且洞內可能缺定位。§3.1 的最大核心面積敘述與表 5 的個體值有落差，暫不引用排名或彙總面積。</p><p>核對面積敘述與表 5，另需臺灣野外的感官、覓食與全年活動資料。</p><p>相關概念與分歧</p><p>- 感官、覓食與日常行為
+- 棲地、洞穴與空間利用 用於跨情境比較。</p><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12153525/">查閱原文</a></p></details>
+<details id="S-004"><summary>S-004｜Demography and welfare status of free-roaming dogs in Yangmingshan National Park, Taiwan</summary><p>- Cheng-Heng Hu、Pin-Huan Yu、Chu-Lin Kang、Hsiang Ling Chen、Shih-Ching Yen（2019），Preventive Veterinary Medicine 166:49–55。DOI 10.1016/j.prevetmed.2019.03.009。
+- 地點、對象與樣本：陽明山，2016–2018 年夏季，6 處樣區的遊蕩犬。
+- 已閱讀範圍：研究機構保存的原刊 PDF，摘要、樣線與估計方法、結果和討論相關段落。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>園區遊蕩犬的數量、表觀存活及健康狀況如何？</p><p>研究方法</p><p>樣線攝影辨識與捕捉再捕捉估計，依道路周邊假設外推園區數量，另有健康觀察與血液樣本。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 樣區三年分別辨識 191、176、216 隻犬；園區外推估計依年為 979、786、957 隻。 | 研究觀察與模型估計 | §2.1、§3.1、表 1–2 | 陽明山，2016–2018 年夏季，6 處樣區的遊蕩犬 |</p><p>研究限制與待查證事項</p><p>樣線受季節、天候與偵測影響，外推依道路緩衝假設；無穿山甲攻擊率。</p><p>需較新犬隻調查、穿山甲傷亡通報與可比較的道路監測。</p><p>相關概念與分歧</p><p>- 遊蕩犬、道路與人為威脅
+- 棲地、洞穴與空間利用 用於跨情境比較。</p><p><a href="https://www.for.nchu.edu.tw/uploads/file/thesis/20240318101222_6demographyandwelfarestatusoffreeroamingdogsinyangmingshannationalparktaiwan.pdf">查閱原文</a></p></details>
+<details id="S-005"><summary>S-005｜Characteristics, location, and usage patterns of resting burrows in Chinese pangolins: Insights from radio-telemetry tracking</summary><p>- Nick Ching-Min Sun、Jing-Shiun Lin、Kurtis Jai-Chyi Pei（2025），Global Ecology and Conservation 57:e03406。DOI 10.1016/j.gecco.2025.e03406。
+- 地點、對象與樣本：臺東延平，2009–2010 年，野生 6 雌 1 雄。
+- 已閱讀範圍：公開原刊文本 §2–5 相關段落及表 1–2，另核對出版摘要。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>同一個體會使用多少休息洞，不同個體會重疊使用嗎？</p><p>研究方法</p><p>樣線數洞；另用無線電追蹤確認休息洞、進出與重複使用。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 追蹤的 7 隻個體合計使用 137 個不同休息洞，記錄 324 次使用。部分洞穴曾由不同個體使用，同時使用共記錄 5 次。 | 研究觀察 | §2.3–2.4、§3.2、表 1 | 臺東延平，2009–2010 年，野生 6 雌 1 雄 |</p><p>研究限制與待查證事項</p><p>約 100 公頃，追蹤 52–327 天。樣線洞穴未按功能分類，與確認的休息洞樣本有別；乾季比較排除育幼雌獸。</p><p>需跨地點驗證洞型分類與重用模式，並追蹤育幼與非育幼期。</p><p>相關概念與分歧</p><p>- 棲地、洞穴與空間利用
+- 繁殖與育幼 用於跨情境比較。
+- 感官、覓食與日常行為 用於跨情境比較。
+- S-002 提供不同地區的洞穴分布調查。</p><p><a href="https://www.researchgate.net/publication/387764337_Characteristics_location_and_usage_patterns_of_resting_burrows_in_Chinese_pangolins_insights_from_radio_telemetry_tracking">查閱原文</a></p></details>
+<details id="S-006"><summary>S-006｜Spatio-temporal relationship between free-roaming dogs and the critically endangered Chinese pangolin</summary><p>- Hsiang Ling Chen、Yu-Chuan Liao（2025），Biological Conservation 306:111160。DOI 10.1016/j.biocon.2025.111160。
+- 地點、對象與樣本：陽明山，2018–2019 年，家犬與野生穿山甲相機樣點。
+- 已閱讀範圍：期刊摘要、重點與章節預覽；全文未取得。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>兩種動物的樣點利用與活動時間有多大重疊？</p><p>研究方法</p><p>相機、洞穴調查、多物種占域模型及核密度估計。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 摘要記載 50 個相機樣點拍到犬、43 個拍到穿山甲，日活動重疊估計為 0.20；模型顯示有犬樣點的穿山甲利用機率較低。 | 研究觀察與模型估計 | 出版版 Abstract、Highlights | 陽明山，2018–2019 年，家犬與野生穿山甲相機樣點 |</p><p>研究限制與待查證事項</p><p>只核對摘要與預覽，未核對完整模型與不確定性；時間重疊係數不等於攻擊機率。</p><p>補全文，追查與陽明山洞穴研究的資料重疊程度及樣點條件。</p><p>相關概念與分歧</p><p>- 遊蕩犬、道路與人為威脅
+- 棲地、洞穴與空間利用 用於跨情境比較。
+- 感官、覓食與日常行為 用於跨情境比較。</p><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0006320725001971">查閱原文</a></p></details>
+<details id="S-007"><summary>S-007｜Aspects of digestive anatomy, feed intake and digestion in the Chinese pangolin (Manis pentadactyla) at Taipei zoo</summary><p>- Mei Fong Lin、Chi-Yen Chang、Ci Wen Yang、Ellen S. Dierenfeld（2015），Zoo Biology 34:262–270。DOI 10.1002/zoo.21212。
+- 地點、對象與樣本：臺北市立動物園，中華穿山甲，解剖 10 隻及餵食試驗 4 隻。
+- 已閱讀範圍：PubMed 書目及作者摘要，未取得全文。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>圈養個體有哪些可描述的消化構造及攝食反應？</p><p>研究方法</p><p>機會性解剖與圈養餵食、消化試驗。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 摘要報告消化道全長約為體長 9 倍；試驗配方加入磨碎幾丁質後，作者報告糞便成形度改善、部分營養素消化率下降。 | 研究觀察（摘要） | PubMed Abstract | 臺北市立動物園，中華穿山甲，解剖 10 隻及餵食試驗 4 隻 |</p><p>研究限制與待查證事項</p><p>小樣本圈養試驗，詳細配方和比較設計須回全文。解剖資料無法單獨重建演化史。</p><p>補圈養試驗全文、臺灣野外食性及演化的直接研究。</p><p>相關概念與分歧</p><p>- 生理構造、演化與食性
+- 棲地、洞穴與空間利用 用於跨情境比較。
+- 感官、覓食與日常行為 用於跨情境比較。</p><p><a href="https://pubmed.ncbi.nlm.nih.gov/25914383/">查閱原文</a></p></details>
+<details id="S-008"><summary>S-008｜光電馬頭山｜穿山甲及陸蟹棲地受衝擊？</summary><p>- 郭志榮、葉鎮中（2024），公視《我們的島》，2024-06-02。DOI 不適用。
+- 地點、對象與樣本：高雄馬頭山及旗山，光電案相關人士。
+- 已閱讀範圍：網頁報導正文，影片與官方文件未檢視。
+- 原始來源、版本與存取資訊。</p><p>研究問題</p><p>光電案有哪些可歸屬的主張，還欠哪些原件？</p><p>研究方法</p><p>記者採訪及事件報導。</p><p>主要發現</p><p>| 陳述 | 證據類型 | 原文定位 | 適用範圍 |
+| --- | --- | --- | --- |
+| 公視刊登此報導。報導引述孫敬閔憂心穿山甲棲地，也記錄居民的程序質疑、市府對說明會性質的說法及業者表示會顧及生態。 | 已確認事實（刊登）；各方主張（採訪所載） | 頁首日期與〈台灣穿山甲重要棲地 學者與居民都擔心光電場會破壞生態〉 | 高雄馬頭山及旗山，光電案相關人士 |</p><p>研究限制與待查證事項</p><p>發言以 2024 年報導為限。實際核准及程序、族群比較、施工與生態影響均待查證；區分歷史掩埋場案與本次光電案。</p><p>需官方案名、範圍與文件版本、會議與審查紀錄及在地生態基線。</p><p>相關概念與分歧</p><p>- 保育與土地開發案例
+- 棲地、洞穴與空間利用 用於跨情境比較。
+- 遊蕩犬、道路與人為威脅 用於跨情境比較。</p><p><a href="https://ourisland.pts.org.tw/content/10804">查閱原文</a></p></details>
+<details id="S-009"><summary>S-009｜臺灣穿山甲</summary><p>- 林業及自然保育署。未標示發表年；官方物種資料。
+- 地點與對象：臺灣本島；臺灣穿山甲。
+- 已閱讀範圍：分類、分布與棲地相關欄目。
+- 原文及存取資訊。</p><p>問題與方法</p><p>提供臺灣族群的分類、分布及生態概述。</p><p>官方物種概述，分布段引述本島自動相機監測。</p><p>發現與定位</p><p>官方列學名為 *Manis pentadactyla pentadactyla*，屬鱗甲目（Pholidota）、穿山甲科（Manidae）。（物種學名、分類欄）</p><p>限制與待查事項</p><p>官方分類資料；物種頁的分布描述與個體活動範圍是不同尺度。</p><p>相關概念</p><p>- 臺灣穿山甲的分類與外部形態</p><p><a href="https://www.forest.gov.tw/0008047">查閱原文</a></p></details>
+<details id="S-010"><summary>S-010｜穿山甲</summary><p>- 臺北市立動物園。未標示發表年；官方動物介紹。
+- 地點與對象：臺北市立動物園物種介紹；中華穿山甲。
+- 已閱讀範圍：分類、形態與習性相關欄目。
+- 原文及存取資訊。</p><p>問題與方法</p><p>介紹穿山甲的外觀與功能。</p><p>動物園科普概述，相關欄目未交代量測樣本。</p><p>發現與定位</p><p>穿山甲屬哺乳綱，身上有鱗片及毛髮，前肢發達、無齒，並以長舌黏取獵物。（分類、形態與習性欄）</p><p>限制與待查事項</p><p>供基本外觀與功能解說。精確舌長或舔食速率仍須直接測量來源。</p><p>相關概念</p><p>- 臺灣穿山甲的分類與外部形態</p><p><a href="https://www.zoo.gov.taipei/News_Content.aspx?n=CC7DF0D6519201FD&amp;s=442EFCA914E4F830&amp;sms=D5A439C2736D52BF">查閱原文</a></p><p>受威脅時可捲起身體，把較柔軟的腹部包在內側。<a href="https://www.zoo.gov.taipei/News_Content.aspx?n=F18B015186A5F770&amp;s=07A0F6BD97A785C1&amp;sms=5B8197AA5783E7B9">動物園補充說明</a></p></details>
+<details id="S-011"><summary>S-011｜Prey composition and seasonal dietary patterns of Chinese pangolins in southeast Taiwan</summary><p>- Nick Ching-Min Sun、Chun-Chieh Liang、Chung-Chi Lin、Kurtis Jai-Chyi Pei、Hou-Feng Li。2025；同儕審查論文，Global Ecology and Conservation 58:e03444。
+- 地點與對象：臺灣東南部；無線電追蹤的野生中華穿山甲，132 份糞便。
+- 已閱讀範圍：出版摘要及公開原刊書目；全文未完整核對。
+- 原文及存取資訊。</p><p>問題與方法</p><p>臺灣東南部野生穿山甲吃哪些獵物，食物組成是否隨季節變化？</p><p>採集追蹤個體的糞便，過濾後辨識獵物殘留並以回收率估算食物組成。</p><p>發現與定位</p><p>132 份糞便辨識出螞蟻和白蟻；作者報告夏季攝食的白蟻較少，而螞蟻的攝食在夏季最高。（Abstract）</p><p>限制與待查事項</p><p>研究觀察與估算；132 是糞便樣本數。結果限於研究地區、季節與方法，不能用來說明怎麼發現獵物。</p><p>相關概念</p><p>- 生理構造、演化與食性</p><p><a href="https://www.sciencedirect.com/science/article/pii/S2351989425000459">查閱原文</a></p><p>季節補記：臺灣東南部樣本中，白蟻獵物估算生物量在 4–6 月達高峰，螞蟻攝食在夏季最高。臺灣土白蟻是當地重要獵物。</p></details>
+<details id="S-012"><summary>S-012｜Investigating the use of sensory information to detect and track prey by the Sunda pangolin (Manis javanica) with conservation in mind</summary><p>- Joshua D. DiPaola、Marnoch Yindee、Joshua M. Plotnik。2020；同儕審查論文，Scientific Reports 10:9787。
+- 地點與對象：泰國北碧府；兩隻野生出生、在照養設施受試的巽他穿山甲。
+- 已閱讀範圍：出版 PDF 摘要及方法、結果、討論相關段落。
+- 原文及存取資訊。</p><p>問題與方法</p><p>巽他穿山甲可用什麼感官線索找到食物？</p><p>控制選擇任務中可用的氣味、聲音與視覺資訊。</p><p>發現與定位</p><p>兩隻受試個體在只提供氣味線索時找到食物的表現優於隨機；視覺及聽覺條件只有一隻完成。（Methods、Results、表 1）</p><p>限制與待查事項</p><p>研究觀察；小樣本、不同物種與照養場域。無法據此評定臺灣野生穿山甲的感官能力。</p><p>相關概念</p><p>- 感官、覓食與日常行為</p><p><a href="https://www.nature.com/articles/s41598-020-65898-x.pdf">查閱原文</a></p></details>
+<details id="S-013"><summary>S-013｜Spatial ecology of the fossorial Chinese pangolin: Addressing methodological barriers to fundamental and conservation research</summary><p>- Nick Ching-Min Sun、Jing-Shiun Lin、Shao-Qi Ge、Kurtis Jai-Chyi Pei。2026；Research Square 預印本 v1，2026-05-05。
+- 地點與對象：臺灣；野生中華穿山甲的空間生態。
+- 已閱讀範圍：預印本封面與題名關鍵詞。
+- 原文及存取資訊。</p><p>問題與方法</p><p>追蹤訊號衰減等方法問題如何影響空間生態研究？</p><p>方法及樣本數待全文核對。</p><p>發現與定位</p><p>目前僅登錄書目及研究方向。（預印本封面及關鍵詞）</p><p>限制與待查事項</p><p>待查證；已識別版本為預印本，樣本、方法、估計與是否已有期刊版留待核對。</p><p>相關概念</p><p>- 棲地、洞穴與空間利用</p><p><a href="https://doi.org/10.21203/rs.3.rs-9556585/v1">查閱原文</a></p></details>
+<details id="S-014"><summary>S-014｜Mortality and morbidity in wild Taiwanese pangolin (Manis pentadactyla pentadactyla)</summary><p>Sun、Arora、J.-S. Lin、W.-C. Lin、Chi、Chen、Pei（2019；末位作者依更正為 Kurtis Jai-Chyi Pei）</p><p>屏東救傷中心 2006–2017 年紀錄，個體多來自南臺灣；另有臺東 2009–2017 年野外追蹤。</p><p>屏東救傷中心收治 131 隻，其中 57 隻入站時健康。74 隻傷病個體中 54 隻有創傷。這 54 件創傷中，42 件為捕獸鋏（77.8%）、11 件尾傷疑似犬咬（20.4%）、1 件車撞（1.9%，由 1/54 四捨五入）。14 隻入站後死亡，其中 11 隻有肢體創傷、1 隻為車撞、2 隻屬其他。另一組野外追蹤共 47 隻，其中有 5 起受困於洞穴或樹洞後死亡。</p><p>Results，表 1、3、4；DOI 10.1371/journal.pone.0198230；作者姓名更正 DOI 10.1371/journal.pone.0212960。</p><p>救傷樣本受發現、通報及轉送影響。入站後死亡與野外追蹤事件分列，均無法估計全臺野外死因比例。</p><p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198230">查閱原文</a></p></details>
+<details id="S-015"><summary>S-015｜穿山甲要怎樣社團｜臺北市立動物園遊蕩動物議題特展</summary><p>臺北市立動物園（2025 特展）</p><p>特生中心野生動物急救站歷史創傷紀錄。</p><p>特展引述 2013–2022 年創傷分類 206 件中 145 件歸類為犬隻攻擊，約 70%（145÷206）。網頁另引述公民通報有路殺資料，與救傷創傷分母不同。</p><p>1993–2022 穿山甲創傷分類與十年間隔數量、2013–2022 救傷圖說與重點。</p><p>使用特展公開摘要，未重算原始個案。此組資料與屏東舊樣本的期間與收案來源不同，不能直接用兩個百分比推算全臺增幅。</p><p><a href="https://www.zoo.gov.tw/2025Rightwherelivesbelong/Scientific_Research_2.html">查閱原文</a></p></details>
+<details id="S-016"><summary>S-016｜馬頭山惡地保安林與穿山甲保育活動公告</summary><p>林業及自然保育署屏東分署（2026-08-26）</p><p>高雄馬頭山、第 2211 號土砂捍止保安林及台 28 線生態廊道。</p><p>公告說明在地團隊以自動相機及無線電追蹤累積調查經驗，並介紹惡地地景、保安林功能與生態廊道。</p><p>公告正文。</p><p>這是保育活動與在地監測的資料。光電案是否核准、施工及實測影響仍未取得足以確認的官方案卷。</p><p><a href="https://www.forest.gov.tw/Ecological/news/0079090">查閱原文</a></p></details>
+<details id="S-017"><summary>S-017｜品嚐「現流」蟻窩自己來－穿山甲「芎梧」依靠嗅覺</summary><p>臺北市立動物園（2015-03-06）</p><p>臺北市立動物園，照養中的臺灣穿山甲幼獸「芎梧」。</p><p>保育員打開盛有螞蟻的盒子時，芎梧轉頭嗅聞。另一次牠扒開蟻巢，以舌頭黏取螞蟻。</p><p>新聞稿正文第二、三段。</p><p>照養個案觀察，野外感官相對重要性及覓食距離待查。</p><p><a href="https://www.zoo.gov.taipei/News_Content.aspx?n=BD065B2FA7782989&amp;s=DE0943378FA8BBDA">查閱原文</a></p></details>
+<details id="S-018"><summary>S-018｜Chinese Pangolin Changes Local Vertebrate Assemblages and Contributes to Their Interspecific Interactions by Burrowing and Revisitation</summary><p>Song Sun、Ruirui Mao 等。2025 年先行出版，2026 年期刊卷期。</p><p>中國廣東 2020–2023 年野外相機追蹤 184 個中華穿山甲洞穴。鼠類是常見洞道利用者；許多鳥類主要利用洞口附近土堆。適用於研究地點與物種。</p><p>定位：摘要、研究設計與討論。<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/1749-4877.12946">查閱原文</a></p></details>
+<details id="S-019"><summary>S-019｜臺北市立動物園｜穿山甲的洞穴與訪客</summary><p>臺北市立動物園的教育文章，介紹白鼻心、鼬獾、食蟹獴可利用穿山甲的洞躲藏或棲居。個別動物進入育幼洞的臺東野外紀錄另見 S-001。</p><p><a href="https://www.zoo.gov.taipei/News_Content.aspx?n=BD065B2FA7782989&amp;s=80BF61CD7E1EE62F">查閱原文</a></p></details>
+<details id="S-020"><summary>S-020｜臺北市立動物園｜穿山甲寶寶外出搭便車</summary><p>臺北市立動物園照養案例，幼獸可攀附母獸尾巴隨牠移動。這是育幼行為的照養紀錄，可與 S-015 所述尾傷影響並讀。</p><p><a href="https://www.zoo.gov.taipei/News_Content.aspx?n=BD065B2FA7782989&amp;s=21C7675451097B38&amp;sms=72544237BBE4C5F6">查閱原文</a></p></details>
+<details id="S-021"><summary>S-021｜屏科大保育類野生動物收容中心｜2025 年穿山甲大盤點</summary><p>孫筱媛撰寫，2025-12-17。屏科大該次盤點共收治 38 隻，18 隻入院時無明顯外傷或異常。其餘 20 隻入院原因為犬隻攻擊 13、車撞 3、陷阱傷 3、私養沒入安置 1。65% 為 13 ÷ 20；分類包括安置，與早期創傷件數的分母不同。</p><p><a href="https://ptrc.npust.edu.tw/2025/12/%F0%9F%93%A3%E3%80%90%E6%84%9F%E8%AC%9D%E6%8D%90%E6%AC%BE%E4%BA%BA%E7%B3%BB%E5%88%97-10%E3%80%91-%E4%BF%9D%E8%82%B2%E8%A7%80%E5%BF%B5%E5%AE%A3%E5%B0%8E-2025%E5%B9%B4%E7%A9%BF%E5%B1%B1%E7%94%B2/">查閱原文</a></p></details>
+</section></main>
+<footer class="deck-footer">
+<nav class="deck-controls" aria-label="投影片導覽" hidden>
+<button id="deck-prev" type="button" aria-label="上一張投影片">上一張</button>
+<span id="slide-count" aria-live="polite"></span>
+<button id="deck-next" type="button" aria-label="下一張投影片">下一張</button>
+</nav>
+<small>AI Agent 課程作業 · 臺灣穿山甲 LLM Wiki</small>
+</footer>
+<script>
+const questions = [
+ {prompt:'穿山甲身上有鱗片，也有毛嗎？', choices:['有，也可以觀察到毛髮','沒有，鱗片完全取代毛髮'], answer:0, evidence:'臺北市立動物園的形態資料記載穿山甲同時具有鱗片與毛髮。牠屬哺乳綱，野外研究也記錄了母獸的育幼行為。', refs:['S-010','S-001']},
+ {prompt:'臺灣東南部的穿山甲只吃白蟻嗎？', choices:['只吃白蟻','也吃螞蟻，而且菜單會換季'], answer:1, evidence:'螞蟻和白蟻都在牠的菜單上。東南部樣本顯示，估算的白蟻獵物生物量在 4–6 月達到高峰，螞蟻則在夏季最高。牠會扒開蟻巢，再用長舌黏取獵物。', refs:['S-011','S-017']},
+ {prompt:'找到 10 個洞，就代表有 10 隻穿山甲嗎？', choices:['可以，一個洞對應一隻','無法直接換算，洞可能被重複使用'], answer:1, evidence:'臺東追蹤的七隻個體合計使用 137 個不同的休息洞。有些洞曾由不同個體使用，單憑洞數無法推出個體數。研究還另外記錄了 324 次使用，同一個洞可以貢獻不止一次紀錄。洞的數量、使用次數、動物的數量是三個不同的數字。', refs:['S-005','S-002']},
+ {prompt:'育幼時，穿山甲媽媽會一直待在同一個洞嗎？', choices:['有野外紀錄拍到母獸攜幼換洞','已有研究證實母獸整個育幼期都留在原洞'], answer:0, evidence:'臺東洞口相機曾拍到母獸 LF28 攜幼移往另一個育幼洞。這是單一母獸的直接紀錄，其他個體換洞的頻率仍需要更多觀察。洞口相機提供的是那一次換洞的證據，長期追蹤則幫助研究者把事件放回育幼歷程中。', refs:['S-001']},
+ {prompt:'特生中心急救站 2013–2022 年的穿山甲創傷紀錄，哪一種傷害占最多？', choices:['車輛撞擊','犬隻攻擊'], answer:1, evidence:'206 件創傷紀錄中，145 件歸為犬隻攻擊，約占七成。狗咬可以造成尾巴缺損，嚴重時也會致死。七成的分母是特生中心急救站這段期間的創傷紀錄。', refs:['S-015']},
+ {prompt:'如果馬頭山的刺竹林被整地，穿山甲可能少掉哪些生活空間？', choices:['覓食、用洞和在棲地間移動的空間','只影響風景，穿山甲的住處與食物都不受影響'], answer:0, evidence:'竹林與土壤可以提供蟻、可挖洞的地面與移動空間。移除植被或切斷棲地可能影響這些資源。這是開發情境下的風險，公視報導記載的是計畫與爭議，實際衝擊仍待查證。', refs:['S-008','S-016']}
+];
+const get = id => document.getElementById(id);
+const form = get('question');
+let current = 0;
+let guesses = Array(questions.length).fill(null);
+function citation(id) {
+ const link = document.createElement('a');
+ link.href = '#' + id;
+ link.textContent = id;
+ return link;
+}
+function addText(parent, content) {
+ const p = document.createElement('p');
+ p.textContent = content;
+ parent.append(p);
+ return p;
+}
+function render(focus = false) {
+ const q = questions[current];
+ const guess = guesses[current];
+ const completed = guesses.filter(value => value !== null).length;
+ const correct = guesses.filter((value, index) => value === questions[index].answer).length;
+ get('position').textContent = '第 ' + (current + 1) + ' 題，共 6 題';
+ get('score').textContent = '已揭曉 ' + completed + ' 題，答對 ' + correct + ' 題';
+ get('progress').value = completed;
+ get('prompt').textContent = q.prompt;
+ const options = get('options');
+ options.replaceChildren();
+ q.choices.forEach((choice, index) => {
+   const label = document.createElement('label');
+   label.className = 'option';
+   const input = document.createElement('input');
+   input.type = 'radio';
+   input.name = 'choice';
+   input.value = index;
+   input.required = true;
+   input.checked = guess === index;
+   input.disabled = guess !== null;
+   label.append(input, choice);
+   options.append(label);
+ });
+ get('reveal').hidden = guess !== null;
+ const feedback = get('feedback');
+ feedback.replaceChildren();
+ feedback.hidden = guess === null;
+ if (guess !== null) {
+   addText(feedback, (guess === q.answer ? '答對了。' : '答案是：') + q.choices[q.answer] + '。');
+   addText(feedback, q.evidence);
+   const refs = addText(feedback, 'Wiki 證據 ');
+   q.refs.forEach(id => refs.append(citation(id), ' '));
+   if (q.extra) addText(feedback, q.extra + ' ').append(citation(q.extraRef));
+ }
+ get('previous').disabled = current === 0;
+ get('next').disabled = guess === null;
+ get('next').textContent = current === questions.length - 1 ? '看解謎結果' : '下一題';
+ if (focus) get('prompt').focus();
+}
+form.addEventListener('submit', event => {
+ event.preventDefault();
+ const choice = form.querySelector('input:checked');
+ if (!choice || guesses[current] !== null) return;
+ guesses[current] = Number(choice.value);
+ render();
+ get('next').focus();
+});
+get('previous').onclick = () => navigate(quizStart + current - 1);
+const leading = ['cover', 'roadmap', 'profile', 'body', 'food', 'burrows', 'burrow-neighbors', 'breeding', 'young', 'risk', 'matoushan'];
+const quizStart = leading.length;
+const deck = [...leading, ...questions.map((_, index) => 'q' + (index + 1)), 'recap', 'wiki'];
+const slides = [...document.querySelectorAll('[data-slide]')];
+let active = 0;
+let evidenceReturn = null;
+
+function showSlide() {
+ const hash = location.hash.slice(1);
+ const id = hash === 'quiz' ? 'q1' : (hash || 'cover');
+ const evidence = /^S-\d{3}$/.test(id) ? get(id) : null;
+ active = deck.indexOf(evidence ? 'wiki' : id);
+ if (active < 0) active = 0;
+ const isQuiz = active >= quizStart && active < quizStart + questions.length;
+ const panel = get(isQuiz ? 'quiz' : deck[active]);
+ slides.forEach(slide => { slide.hidden = slide !== panel; });
+ if (isQuiz) {
+   current = active - quizStart;
+   render();
+ }
+ if (panel.id === 'recap') {
+   const completed = guesses.filter(value => value !== null).length;
+   const correct = guesses.filter((value, index) => value === questions[index].answer).length;
+   get('recap-score').textContent = '已揭曉 ' + completed + ' 題，答對 ' + correct + ' 題。';
+ }
+ get('slide-count').textContent = (active + 1) + ' / ' + deck.length;
+ get('deck-prev').disabled = active === 0;
+ get('deck-prev').textContent = panel.id === 'wiki' && evidenceReturn !== null ? '返回原投影片' : '上一張';
+ get('deck-next').disabled = active === deck.length - 1;
+ window.scrollTo(0, 0);
+ if (evidence) {
+   evidence.open = true;
+   evidence.querySelector('summary').focus();
+   evidence.scrollIntoView({block: 'start'});
+ } else {
+   const heading = panel.querySelector(isQuiz ? 'legend' : 'h1, h2, h3');
+   heading.tabIndex = -1;
+   heading.focus({preventScroll: true});
+ }
+}
+
+function navigate(index) {
+ if (index < 0 || index >= deck.length) return;
+ const hash = '#' + deck[index];
+ if (location.hash === hash) showSlide();
+ else location.hash = hash;
+}
+
+function previousSlide() {
+ if (deck[active] === 'wiki' && evidenceReturn !== null) {
+   const index = evidenceReturn;
+   evidenceReturn = null;
+   navigate(index);
+ } else navigate(active - 1);
+}
+
+get('next').onclick = () => navigate(active + 1);
+get('reset').onclick = () => {
+ guesses = Array(questions.length).fill(null);
+ navigate(quizStart);
+};
+get('deck-prev').onclick = previousSlide;
+get('deck-next').onclick = () => navigate(active + 1);
+document.addEventListener('click', event => {
+ const link = event.target.closest('a[href^="#"]');
+ if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+ if (link.hash.startsWith('#S-')) evidenceReturn = active;
+ else if (link.hash === '#wiki') evidenceReturn = null;
+ if (link.hash === location.hash) showSlide();
+});
+document.addEventListener('keydown', event => {
+ if (event.defaultPrevented || event.altKey || event.metaKey || event.ctrlKey) return;
+ if (event.target.closest('input, textarea, select, [contenteditable]')) return;
+ if (event.key === 'ArrowLeft') {
+   event.preventDefault();
+   previousSlide();
+ } else if (event.key === 'ArrowRight') {
+   event.preventDefault();
+   navigate(active + 1);
+ }
+});
+document.body.classList.add('deck-active');
+document.querySelector('.deck-controls').hidden = false;
+window.addEventListener('hashchange', showSlide);
+showSlide();
+</script>
+</body></html>
